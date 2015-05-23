@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>BootCamp</title>
+		<title>BootCamp 5 | WEB | Week 2</title>
 
-		<meta name="description" content="BootCamp 5 | Web | Week 2">
+		<meta name="description" content="BootCamp 5 | WEB | Week 2">
 		<meta name="author" content="Ken Wang">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -14,23 +14,23 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="//assets.klear.ly/js/reveal/css/reveal.css">
-		<link rel="stylesheet" href="//assets.klear.ly/js/reveal/css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/css/reveal.css">
+		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/css/theme/league.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="//assets.klear.ly/js/reveal/lib/css/zenburn.css">
-		<link rel="stylesheet" href="//assets.klear.ly/js/reveal/css/override.css">
+		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/lib/css/zenburn.css">
+		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/css/override.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '//assets.klear.ly/js/reveal/css/print/pdf.css' : '//assets.klear.ly/js/reveal/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'https://assets.klear.ly/js/reveal/css/print/pdf.css' : 'https://assets.klear.ly/js/reveal/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--[if lt IE 9]><script src="//assets.klear.ly/js/reveal/lib/js/html5shiv.js"></script><![endif]-->
+		<!--[if lt IE 9]><script src="https://assets.klear.ly/js/reveal/lib/js/html5shiv.js"></script><![endif]-->
 	</head>
 	
 	<body>
@@ -42,46 +42,143 @@
 	      <div class="slides">
 
 				<section>
-					<h1>Intro to HTML/CSS/JS</h1>
-					<h2>BootCamp #5 | WEB | Week 2</h2>
+
+				  <section>
+            <h4>An Intro To</h4>
+            <h1>HTML/CSS/JS</h1>
+            <h3>BootCamp #5 | WEB | Week 2</h3>
+					</section>
 					
-					<!--
-					<pre><code data-trim contenteditable>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-					</code></pre>
-					-->
+					<section>
+					  <h3>Theme Switcher</h3>
+            <p>
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/black.css'); return false;">Black</a> -
+              <!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/white.css'); return false;">White</a> -->
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/league.css'); return false;">League</a> -
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/sky.css'); return false;">Sky</a> -
+              <!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/beige.css'); return false;">Beige</a> -->
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/simple.css'); return false;">Simple</a> -
+              <!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/serif.css'); return false;">Serif</a> -->
+              <!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/blood.css'); return false;">Blood</a> -->
+              <!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/night.css'); return false;">Night</a> -->
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/moon.css'); return false;">Moon</a> -
+              <a href="#" onclick="document.getElementById('theme').setAttribute('href','https://assets.klear.ly/js/reveal/css/theme/solarized.css'); return false;">Solarized</a>
+            </p>
+          </section>
 				</section>
 				
 				<section>
 				  <h2>What Are They?</h2>
 				  <ul>
-				    <li class="fragment">HTML: HyperText Markup Language</li>
-				    <li class="fragment">CSS: Cascading Style Sheets</li>
-				    <li class="fragment">JS: JavaScript</li>
+				    <li>HTML<span class="fragment"> - HyperText Markup Language</span></li>
+				    <li>CSS<span class="fragment"> - Cascading Style Sheets</span></li>
+				    <li>JS<span class="fragment"> - JavaScript</span></li>
 				  </ul>
 				</section>
 
 				<section>
 				  <h2>What Do They Do?</h2>
 				  <ul>
-				    <li class="fragment">HTML: Content</li>
-				    <li class="fragment">CSS: Presentation</li>
-				    <li class="fragment">JS: Interaction</li>
+				    <li>HTML<span class="fragment"> - Content (內容)</span></li>
+				    <li>CSS<span class="fragment"> - Presentation (呈現樣式)</span></li>
+				    <li>JS<span class="fragment"> - Interaction (互動行為)</span></li>
 				  </ul>
 				</section>
 				
+        <section>
+          <h2>HTML</h2>
+          <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;我是標題&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;哈囉！&lt;h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+				
+        <section>
+
+          <section>
+            <h2>HTML</h2>
+            <ul>
+              <li>Elements (元素物件)</li>
+              <li>Tags (標籤)</li>
+              <li>Attributes (屬性)</li>
+            </ul>
+            <p class="fragment">More: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="_blank">Intro to HTML - MDN</a></p>
+          </section>
+
+          <section>
+            <h2>Elements</h2>
+            <ul>
+              <li>Building blocks (積木)</li>
+              <li>Semantic meaning (語義)</li>
+              <li>Hierarchical structure (階層/樹狀架構)</li>
+              <li>DOM<span class="fragment"> - Document Object Model</span></li>
+            </ul>
+          </section>
+        
+          <section>
+            <h2>Tags</h2>
+            <ul>
+              <li>Start tag vs Closing tag</li>
+              <li>Self-closing tags</li>
+              <li>Nesting order</li>
+            </ul>
+            <pre class="fragment"><code>&lt;p&gt;Hello World&lt;/p&gt;</code></pre>
+          </section>
+        
+          <section>
+            <h2>Attributes</h2>
+            <ul>
+              <li>Name value pairs
+                
+              </li>
+              <li>Boolean attributes
+              </li>
+              <li>Quotes<span class="fragment">, quotes</span><span class="fragment">, quotes!</span></li>
+            </ul>
+            <pre class="fragment"><code data-trim contenteditable>
+&lt;img src="girl.jpg" alt="正妹照片"&gt;
+
+&lt;!-- 以下都一樣 --&gt;
+&lt;input name="email" required="required"&gt;
+&lt;input name="email" required=""&gt;
+&lt;input name="email" required&gt;
+
+            </code></pre>
+            
+          </section>
+
+        </section>
+        
+        
+        <section>
+          <h2>HTML Elements</h2>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+        </section>
+        
+        
+        
+        
+        
+        
+        
 	    </div><!-- .slides -->
 	    
 	  </div><!-- .reveal -->
 		
-		<script src="//assets.klear.ly/js/reveal/lib/js/head.min.js"></script>
-		<script src="//assets.klear.ly/js/reveal/js/reveal.js"></script>
+		
+		
+		
+		
+		
+		<script src="https://assets.klear.ly/js/reveal/lib/js/head.min.js"></script>
+		<script src="https://assets.klear.ly/js/reveal/js/reveal.js"></script>
 
 		<script>
 			Reveal.initialize({
@@ -91,12 +188,12 @@
 				center: true,
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				dependencies: [
-					{ src: '//assets.klear.ly/js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '//assets.klear.ly/js/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '//assets.klear.ly/js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '//assets.klear.ly/js/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '//assets.klear.ly/js/reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: '//assets.klear.ly/js/reveal/plugin/notes/notes.js', async: true }
+					{ src: 'https://assets.klear.ly/js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'https://assets.klear.ly/js/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://assets.klear.ly/js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://assets.klear.ly/js/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'https://assets.klear.ly/js/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://assets.klear.ly/js/reveal/plugin/notes/notes.js', async: true }
 				]
 			});
 
