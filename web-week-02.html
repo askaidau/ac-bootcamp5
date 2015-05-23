@@ -57,6 +57,34 @@
 	    </div><!-- .slides -->
 	    
 	  </div><!-- .reveal -->
+		
+		<script src="//assets.klear.ly/js/reveal/lib/js/head.min.js"></script>
+		<script src="//assets.klear.ly/js/reveal/js/reveal.js"></script>
 
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '//assets.klear.ly/js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '//assets.klear.ly/js/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '//assets.klear.ly/js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '//assets.klear.ly/js/reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '//assets.klear.ly/js/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '//assets.klear.ly/js/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+		
 	</body>
 </html>
