@@ -18,7 +18,8 @@
 		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/css/theme/league.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/lib/css/zenburn.css">
+		<!-- http://cdnjs.com/libraries/highlight.js/ -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/monokai_sublime.min.css">
 		<link rel="stylesheet" href="https://assets.klear.ly/js/reveal/css/override.css">
 
 		<!-- Printing and PDF exports -->
@@ -41,12 +42,12 @@
 	      
 	      <div class="slides">
 
-				<section>
+				<section id="overview">
 
 				  <section>
-            <h4>An Intro To</h4>
+            <h3>An Intro To</h3>
             <h1>HTML/CSS/JS</h1>
-            <h3>BootCamp #5 | WEB | Week 2</h3>
+            <h4>BootCamp #5 | WEB | Week 2</h4>
 					</section>
 					
 					<section>
@@ -67,27 +68,48 @@
           </section>
 				</section>
 				
-				<section>
-				  <h2>What Are They?</h2>
-				  <ul>
-				    <li>HTML<span class="fragment"> - HyperText Markup Language</span></li>
-				    <li>CSS<span class="fragment"> - Cascading Style Sheets</span></li>
-				    <li>JS<span class="fragment"> - JavaScript</span></li>
-				  </ul>
-				</section>
-
-				<section>
-				  <h2>What Do They Do?</h2>
-				  <ul>
-				    <li>HTML<span class="fragment"> - Content (內容)</span></li>
-				    <li>CSS<span class="fragment"> - Presentation (呈現樣式)</span></li>
-				    <li>JS<span class="fragment"> - Interaction (互動行為)</span></li>
-				  </ul>
-				</section>
+				<section id="overview">
 				
-        <section>
-          <h2>HTML</h2>
-          <pre><code data-trim contenteditable>
+          <section>
+            <h2>What Are They?</h2>
+            <ul>
+              <li>HTML<span class="fragment"> - HyperText Markup Language</span></li>
+              <li>CSS<span class="fragment"> - Cascading Style Sheets</span></li>
+              <li>JS<span class="fragment"> - JavaScript</span></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>What Do They Do?</h2>
+            <ul>
+              <li>HTML<span class="fragment"> - Content (內容)</span></li>
+              <li>CSS<span class="fragment"> - Presentation (呈現樣式)</span></li>
+              <li>JS<span class="fragment"> - Interaction (互動行為)</span></li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2>Separation of Concerns</h2>
+            <h4>為何要將 HTML/CSS/JS 分開？</h4>
+            <ul>
+              <li>Efficiency 效率</li>
+              <li>Ease of maintenance 容易維護</li>
+              <li>Accessibility 無障礙/網頁親和力</li>
+              <li>Device compatibility 裝置相容性</li>
+              <li>Web crawlers/search engines 搜尋引擎</li>
+              <li><a href="http://www.smashingmagazine.com/2012/04/20/decoupling-html-from-css/" target="_blank">Decoupling HTML from CSS | Smashing Magazine</a></li>
+              <li><a href="http://www.w3.org/community/webed/wiki/The_web_standards_model_-_HTML_CSS_and_JavaScript#Why_separate.3F" target="_blank">Why Separate? | W3C</a></li>
+            </ul>
+          </section>
+          
+        </section>
+				
+        <section id="html">
+
+          <section>
+            <h1>HTML</h1>
+            <h3>HyperText Markup Language</h3>
+            <pre><code data-trim contenteditable>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -97,13 +119,20 @@
     &lt;h1&gt;哈囉！&lt;h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-          </code></pre>
-        </section>
-				
-        <section>
+            </code></pre>
+          </section>
 
           <section>
-            <h2>HTML</h2>
+            <h2>Document Type Declaration</h2>
+            <ul>
+              <li><code class="html">&lt;!DOCTYPE html&gt;</code>
+              <li>Quicks mode</li>
+              <li>Standards mode</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>HTML Basics</h2>
             <ul>
               <li>Elements (元素物件)</li>
               <li>Tags (標籤)</li>
@@ -111,7 +140,7 @@
             </ul>
             <p class="fragment">More: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="_blank">Intro to HTML - MDN</a></p>
           </section>
-
+          
           <section>
             <h2>Elements</h2>
             <ul>
@@ -135,17 +164,14 @@
           <section>
             <h2>Attributes</h2>
             <ul>
-              <li>Name value pairs
-                
-              </li>
-              <li>Boolean attributes
-              </li>
+              <li>Name value pairs</li>
+              <li>Boolean attributes</li>
               <li>Quotes<span class="fragment">, quotes</span><span class="fragment">, quotes!</span></li>
             </ul>
             <pre class="fragment"><code data-trim contenteditable>
-&lt;img src="girl.jpg" alt="正妹照片"&gt;
+&lt;img src="photo.jpg" alt="照片"&gt;
 
-&lt;!-- 以下都一樣 --&gt;
+&lt;!-- Boolean Attribute 範例。以下意思都一樣 --&gt;
 &lt;input name="email" required="required"&gt;
 &lt;input name="email" required=""&gt;
 &lt;input name="email" required&gt;
@@ -158,15 +184,170 @@
         
         
         <section>
-          <h2>HTML Elements</h2>
+          <h2>HTML - Elements</h2>
           <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+          <h4>Tutorials</h4>
+          <p><a href="http://www.htmldog.com/guides/html/beginner/" target="_blank">http://www.htmldog.com/guides/html/beginner/</a></p>
+        </section>
+        
+        
+        <section id="seo">
+          <section>
+            <h1>SEO</h1>
+            <h3>Search Engine Optimization</h3>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO">https://developer.mozilla.org/en-US/docs/Glossary/SEO</a></p>
+          </section>
         </section>
         
         
         
-        
-        
-        
+        <section id="css">
+          
+          <section>
+            <h1>CSS</h1>
+            <h3>Cascading Style Sheets</h3>
+          
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS">
+              &ldquo;CSS describes how the structured elements in the document are to be rendered on screen, on paper, in speech, or on other media. The ability to adjust the document's presentation depending on the output medium is a key feature of CSS&rdquo;
+            </blockquote>
+            
+          </section>
+          
+          
+          <section>
+            <h2>CSS Syntax</h2>
+            <pre><code data-trim contenteditable>
+/* this is a css comment */
+
+/* at-rule */
+@import url(base.css);
+
+/* a rule set: selector, declaration block, declarations */
+body {
+  color: red;
+  background: yellow;
+}
+
+            </code></pre>
+          </section>
+          
+          <section>
+            <h2>CSS Selectors</h2>
+            <ul>
+              <li>Universal selector</li>
+              <li>Element type selector</li>
+              <li>ID selector</li>
+              <li>Class selector</li>
+              <li>Descendant combinator</li>
+              <li>Child combinator</li>
+              <li>General sibling combinator</li>
+              <li>Attribute selector</li>
+              <li>Pseudo-class</li>
+              <li>Pseudo-element</li>
+            </ul>
+            <p><a href="http://www.sitepoint.com/web-foundations/css-selectors/" target="_blank">CSS Selectors | SitePoint</a></p>
+          </section>
+          
+          <section>
+            <h2>CSS Selectors (contd.)</h2>
+            <ul>
+              <li>ID vs Class</li>
+              <li>ID 單一</li>
+              <li>Class 群組</li>
+            </ul>
+            <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;我是標題&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id="big-title" class="intro"&gt;哈囉！&lt;h1&gt;
+    &lt;h3 id="small-title" class="intro"&gt;大家好&lt;h3&gt;
+    &lt;p class="intro"&gt;哈囉哈囉哈囉哈囉哈囉哈囉哈囉哈囉...&lt;p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>          
+          </section>
+          
+          <section>
+            <h2>CSS Placement</h2>
+            <ul>
+              <li>External/Linked (外部)</li>
+              <li>Internal/Embedded (內部)</li>
+              <li>Inline (行內/內鍵式)</li>
+              <li class="fragment">External &gt; Internal &gt; Inline</li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2>CSS Placement (contd.)</h2>
+            <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;我是標題&lt;/title&gt;
+    &lt;!-- External/Linked CSS --&gt;
+    &lt;link rel="stylesheet" href="common.css"&gt;
+    &lt;!-- Internal/Embedded CSS --&gt;
+    &lt;style type="text/css"&gt;
+      body { background: yellow; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Inline CSS --&gt;
+    &lt;h1 style="color:red"&gt;哈囉！&lt;h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+          
+          <section>
+            <h2>Cascade</h2>
+            <h4>疊層／重疊</h4>
+            <ol>
+              <li>User agent (browser) stylesheet</li>
+              <li>User stylesheet</li>
+              <li>Author stylesheet
+                <ul>
+                  <li>External/Linked</li>
+                  <li>Internal/Embedded</li>
+                  <li>Inline</li>
+                </ul>
+              </li>
+            </ol>
+            <p class="fragment">More: <a href="http://www.sitepoint.com/web-foundations/cascade/" target="_blank">The Cascade | SitePoint</a></p>
+          </section>
+
+          <section>
+            <h2>Inheritance</h2>
+            <h4>繼承</h4>
+            <blockquote>
+              The process by which properties are passed from parent to child elements even though those properties have not been explicitly defined by other means. Certain properties are inherited automatically, and as the name implies, a child element will take on the characteristics of its parent with regards to these properties.
+            </blockquote>
+            <p><a href="http://reference.sitepoint.com/css/inheritance">Inheritance | SitePoint</a></p>
+          </section>
+          
+          <section>
+            <h2>Specificity</h2>
+            <h4>權重/優先級</h4>
+            <blockquote>
+              The concept of specificity states that when two or more declarations that apply to the same element, and set the same property, have the same importance and origin, the declaration with the most specific selector will take precedence.
+            </blockquote>
+          </section>
+          
+          <section>
+            <h2>Specificity (contd.)</h2>
+            <h4>權重/優先級</h4>
+            <ul>
+              <li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">CSS Specificity: Things You Should Know | Smashing Magazine</a></li>
+              <li><a href="http://www.stuffandnonsense.co.uk/archives/images/specificitywars-05v2.jpg" target="_blank">Specificity Wars | Malarkey</a></li>
+            </ul>
+          </section>
+          
+          
+          
+        </section>
         
 	    </div><!-- .slides -->
 	    
