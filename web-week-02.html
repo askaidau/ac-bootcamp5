@@ -102,7 +102,9 @@
             </ul>
           </section>
           
-        </section>
+        </section><!-- #overview -->
+        
+        
 				
         <section id="html">
 
@@ -138,7 +140,7 @@
               <li>Tags (標籤)</li>
               <li>Attributes (屬性)</li>
             </ul>
-            <p class="fragment">More: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="_blank">Intro to HTML - MDN</a></p>
+            <p class="fragment">More: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="_blank">Intro to HTML | MDN</a></p>
           </section>
           
           <section>
@@ -179,25 +181,25 @@
             </code></pre>
             
           </section>
+          
+          <section>
+            <h2>HTML - Elements</h2>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+            <h4>Tutorials</h4>
+            <p><a href="http://www.htmldog.com/guides/html/beginner/" target="_blank">http://www.htmldog.com/guides/html/beginner/</a></p>
+          </section>
 
-        </section>
+        </section><!-- #html -->
         
         
-        <section>
-          <h2>HTML - Elements</h2>
-          <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
-          <h4>Tutorials</h4>
-          <p><a href="http://www.htmldog.com/guides/html/beginner/" target="_blank">http://www.htmldog.com/guides/html/beginner/</a></p>
-        </section>
         
-        
-        <section id="seo">
+        <section id="html-seo">
           <section>
             <h1>SEO</h1>
             <h3>Search Engine Optimization</h3>
             <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO">https://developer.mozilla.org/en-US/docs/Glossary/SEO</a></p>
           </section>
-        </section>
+        </section><!-- #html-seo -->
         
         
         
@@ -229,6 +231,17 @@ body {
 }
 
             </code></pre>
+          </section>
+          
+          <section>
+            <h2>CSS Syntax (contd.)</h2>
+            <ul>
+              <li>CSS properties</li>
+              <li>Pseudo-classes</li>
+              <li>Pseudo-elements</li>
+              <li>At-rules</li>
+            </ul>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference | MDN</a></p>
           </section>
           
           <section>
@@ -302,6 +315,7 @@ body {
             </code></pre>
           </section>
           
+          
           <section>
             <h2>Cascade</h2>
             <h4>疊層／重疊</h4>
@@ -344,10 +358,122 @@ body {
               <li><a href="http://www.stuffandnonsense.co.uk/archives/images/specificitywars-05v2.jpg" target="_blank">Specificity Wars | Malarkey</a></li>
             </ul>
           </section>
+                    
           
           
           
-        </section>
+        </section><!-- #css -->
+        
+        
+        
+        <section id="css-bootstrap">
+          
+          <section>
+            <h1>Bootstrap</h1>
+            <ul>
+              <li><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></li>
+            </ul>
+          </section>
+          
+        </section><!-- #css-bootstrap -->
+        
+        
+                
+        <section id="js">
+        
+          <section>
+            <h1>JS</h1>
+            <h3>JavaScript</h3>
+            <blockquote>
+              JavaScript&reg; (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, most known as the scripting language for Web pages
+            </blockquote>
+          </section>
+          
+          <section>
+            <h2>JavaScript</h2>
+            <ul>
+              <li>Developed by Brendan Eich of Netscape in 1995</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript | MDN</a></li>
+              <li>AJAX - Asynchronous JavaScript and XML - 2005</li>
+              <li>一個被誤解(鄙視？)的程式語言</li>
+              <li>不是 JAVA!<span class="fragment"> 不是 JAVA!</span><span class="fragment"> 不是 JAVA!</span></li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2>What is JavaScript Used For?</h2>
+            <ul>
+              <li>Form validation 檢查表單</li>
+              <li>Autocomplete 自動完成</li>
+              <li>Enhance interactions (dynamic components)</li>
+              <li>Load content without doing a complete page load (AJAX)</li>
+              <li>Animations/effects 動畫效果</li>
+              <li>Fix layout problems</li>
+              <li>Tracking</li>
+              <li>Social Plugins</li>
+              <li>Ads</li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2>JS Placement</h2>
+            <ul>
+              <li>External/Linked (外部)</li>
+              <li>Internal/Embedded (內部)</li>
+              <li>Inline (行內/內鍵式)</li>
+              <li class="fragment">External &gt; Internal &gt; Inline</li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2>JS Placement (contd.)</h2>
+            <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;我是標題&lt;/title&gt;
+    &lt;!-- External/Linked JS --&gt;
+    &lt;script src="common.js"&gt;&lt;/script&gt;
+    &lt;!-- Internal/Embedded JS --&gt;
+    &lt;script&gt;
+    alert('Hello!');
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Inline JS --&gt;
+    &lt;h1 onclick="alert('Hello Again!');"&gt;哈囉！&lt;h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+          
+          <section>
+            <h2>Progressive Enhancement</h2>
+            <ul>
+              <li>Websites can now be built purely in JavaScript <span class="fragment">(這會產生什麼問題？)</span></li>
+              <li>Can your site work without JavaScript?</li>
+              <li>Not all browsers are equal</li>
+              <li>Use JavaScript sensibly &amp; responsibly</li>
+              <li><a href="http://blog.teamtreehouse.com/progressive-enhancement-past-present-future" target="_blank">Progressive Enhancement: Past, Present, and Future | Treehouse Blog</a></li>
+            </ul>
+          </section>
+          
+        </section><!-- #js -->
+        
+        
+        <section id="js-jquery">
+          
+          <section>
+            <h1>jQuery</h1>
+            <blockquote>
+              A JavaScript library. Write less, do more.
+            </blockquote>
+            <p><a href="http://jquery.com" target="_blank">jQuery</a></p>
+          </section>
+          
+        </section><!-- #js-jquery -->
+        
+        
         
 	    </div><!-- .slides -->
 	    
